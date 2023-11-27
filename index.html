@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Electronics Graph</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Load plotly.js into the DOM -->
+        <script src='https://cdn.plot.ly/plotly-2.27.0.min.js'></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body>
+        <h1>
+            MOSFET & BJT Voltage Transfer Characteristics
+        </h1>
+        <div>
+            The following simulations are based on the two simple circuits: <br />
+            <div id="images">
+                <div id="mosfetImg">
+                    <img src="https://www.webpagescreenshot.info/image-url/Ibb7j8rc7" alt="MOSFET">
+                    <br />
+                    <label for="Vt">Vt: </label><input type="number" id="Vt" value="0.5"><br />
+                    <label for="kn">kn: </label><input type="number" id="kn" value="0.004"><br />
+                    <label for="VDDM">VDD: </label><input type="number" id="VDDM" value="1.8"><br />
+                    <label for="RD">RD: </label><input type="number" id="RD" value="1000"><br />
+                    <div>
+                        X Axis: VGS <br>
+                        Y Axis: VDS <br>
+                        Z Axis: ID
+                    </div>
+                </div>
+                <div id="bjtImg">
+                    <img src="https://www.webpagescreenshot.info/image-url/J8P49Irwh" alt="BJT">
+                    <br />
+                    <label for="VT">Vt: </label><input type="number" id="VT" value="0.025"><br />
+                    <label for="IS">kn: </label><input type="number" id="IS" value="0.000000000000001"><br />
+                    <label for="VDDB">VDD: </label><input type="number" id="VDDB" value="0.6"><br />
+                    <label for="RC">RC: </label><input type="number" id="RC" value="100"><br />  
+                    <div>
+                        X Axis: VBE <br>
+                        Y Axis: VCE <br>
+                        Z Axis: IC
+                    </div>
+                </div>
+            </div>
+            <button id="run">RUN</button>
+        </div>
+        <div id="electronics">
+            <div id='mosfet'></div>
+            <div id="bjt"></div>
+        </div>
+        <script src="mosfet.js"></script>
+        <script src="bjt.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

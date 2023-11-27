@@ -1,0 +1,55 @@
+#electronics {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#mosfet {
+    position: relative;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+#bjt {
+    position: relative;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+#images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#mosfetImg {
+    position: relative;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+#bjtImg {
+    position: relative;
+    flex-direction: column;
+    flex-basis: 100%;
+    flex: 1;
+}
+
+input {
+    border: 0px;
+}
+
+#run {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+    height: 50px;
+    font-weight: 400;
+    font-size: 150%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+}
