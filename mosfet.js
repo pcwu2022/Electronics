@@ -8,6 +8,8 @@ const MOSFET = (
     Step = 0.05
 ) => {
 
+let kp = kn;
+
 // // MOSFET parameters
 // const Vt = 0.5;
 // const kn = 4E-3;
@@ -44,7 +46,17 @@ for (let i = 0; i < VGSMax/Step; i++){
         } else {
             iD[i][j] = 0.5*kn*vov*vov;
         }
-        load[i].push((VDD - vds)/RD);
+        // load[i].push((VDD - vds)/RD);
+        // Load line: PMOS
+        let vovp = VDD - Vt;
+        let vdsp = VDSMax - vds;
+        if (vovp < 0){
+            load[i][j] = 0;
+        } else if (vdsp < vovp){
+            load[i][j] = kp*(vovp*vdsp - 0.5*vdsp*vdsp);
+        } else {
+            load[i][j] = 0.5*kp*vovp*vovp;
+        }
     }
 }
 
