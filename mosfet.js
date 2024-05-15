@@ -8,7 +8,7 @@ const MOSFET = (
     Step = 0.05
 ) => {
 
-let kp = kn;
+let kp = 1*kn;
 
 // // MOSFET parameters
 // const Vt = 0.5;
