@@ -17,17 +17,25 @@
             The following simulations are based on the two simple circuits: <br />
             <div id="images">
                 <div id="mosfetImg">
-                    <img src="https://www.webpagescreenshot.info/image-url/Ibb7j8rc7" alt="MOSFET">
+                    <img src="https://www.webpagescreenshot.info/image-url/Ibb7j8rc7" alt="MOSFET" id="mos_img">
                     <br />
                     <label for="Vt">Vt: </label><input type="number" id="Vt" value="0.5"><br />
                     <label for="kn">kn: </label><input type="number" id="kn" value="0.004"><br />
                     <label for="VDDM">VDD: </label><input type="number" id="VDDM" value="1.8"><br />
-                    <!-- <label for="RD">RD: </label><input type="number" id="RD" value="1000"><br /> -->
-                    <label for="kpkn">kp/kn: </label><input type="number" id="kpkn" value="1"><br />
+                    <div id="RD_wrapper">
+                        <label for="RD">RD: </label><input type="number" id="RD" value="1000"><br />
+                    </div>
+                    <div id="kpkn_wrapper">
+                        <label for="kpkn">kp/kn: </label><input type="number" id="kpkn" value="1"><br />
+                    </div>
                     <div>
                         X Axis: VGS <br>
                         Y Axis: VDS <br>
                         Z Axis: ID
+                    </div>
+                    <div id="button_wrapper">
+                        <button id="switch_NMOS">Pseudo-NMOS Inverter</button>
+                        <button id="switch_CMOS">CMOS Inverter</button>
                     </div>
                 </div>
                 <div id="bjtImg">

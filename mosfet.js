@@ -36,10 +36,10 @@ const MOSFET = (
                 iD[i][j] = 0.5*kn*vov*vov;
             }
 
-            if (mode === "PMOS"){
+            if (mode === "NMOS"){
                 // Load line: PMOS of pseudo-NMOS
-                let vovp = VDD - vgs - Vt;
-                let vdsp = VDD - vds;
+                let vovp = VDD - Vt;
+                let vdsp = VDSMax - vds;
                 if (vovp < 0){
                     load[i][j] = 0;
                 } else if (vdsp < vovp){
